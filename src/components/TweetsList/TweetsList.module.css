@@ -1,0 +1,14 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.tweetList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,67 @@
+.button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  min-width: 118px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 56px;
+  padding-left: 56px;
+  color: #373737;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 36px;
+}
+.buttonFollow {
+  composes: button;
+  background-color: #ebd8ff;
+}
+
+.buttonFollowing {
+  composes: button;
+  background-color: #5cd3a8;
+}
+
+.tweetCard {
+  text-align: center;
+  position: relative;
+  width: 380px;
+  min-height: 460px;
+  box-shadow: -2.5776965618133545px 6.873857021331787px 20.621572494506836px 0px
+    #0000003b;
+  border-radius: 20px;
+  background-image: url('../../images/logo.svg'),
+    url('../../images/picture.svg'), url('../../images/Ellipse.svg'),
+    url('../../images/Rectangle.svg'),
+    linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
+  background-size: 76px, 308px, 80px, 380px, cover;
+  background-position: top 20px left 20px, top 28px left 36px,
+    top 178px left 150px, top 214px left 0, top 0 left 0;
+  background-repeat: no-repeat;
+  margin: 15px;
+}
+
+.tweetImage {
+  width: 58px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 184px;
+  left: 160px;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.tweets,
+.followers {
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #ebd8ff;
+}
+
+.tweets {
+  padding-top: 284px;
+}

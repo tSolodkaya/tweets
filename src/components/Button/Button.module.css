@@ -1,0 +1,22 @@
+.loadMoreBtn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  min-width: 118px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 56px;
+  padding-left: 56px;
+  color: #373737;
+  background-color: #ebd8ff;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
