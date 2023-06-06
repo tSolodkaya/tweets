@@ -1,0 +1,44 @@
+.hero {
+  width: 1280px;
+  height: 853px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0.3) 0%,
+      rgba(2, 0, 36, 0.3) 100%
+    ),
+    url('../../images/keyboard-gdc13d5471_1280.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.text {
+  font-size: 40px;
+  color: #ebd8ff;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+.tweetLink {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  min-width: 118px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 56px;
+  padding-left: 56px;
+  margin-bottom: 30px;
+  color: #373737;
+  background-color: #ebd8ff;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}

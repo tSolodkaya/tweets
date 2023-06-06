@@ -1,7 +1,9 @@
+import Banner from 'components/Banner/Banner';
+
 const Home = () => {
   return (
     <main>
-      <h1>Welcome to tweets</h1>
+      <Banner text="Welcome to our tweets" />
     </main>
   );
 };
