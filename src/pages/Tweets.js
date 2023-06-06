@@ -13,6 +13,7 @@ const Tweets = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [selected, setSelected] = useState(options.all);
+  const [isShowButton, setIsShowButton] = useState(false);
 
   const location = useLocation();
   const backLinkLocationRef = useRef(location?.state?.from ?? routes.HOME);
@@ -23,6 +24,11 @@ const Tweets = () => {
       .then(data => {
         if (data.length === 0) {
           return Promise.reject(new Error(`Sorry, we have no tweets.`));
+        }
+        console.log(data);
+        setIsShowButton(true);
+        if (data.length < 3) {
+          setIsShowButton(false);
         }
         return setTweets(prevState => [...prevState, ...data]);
       })
@@ -50,7 +56,7 @@ const Tweets = () => {
       <DropDownForm select={selected} onChange={handleSelect} />
       {visibleTweets.length > 0 && <TweetsList tweets={visibleTweets} />}
       {error && <div>{error.message}</div>}
-      <Button handleClick={incrementPage} />
+      {isShowButton && <Button handleClick={incrementPage} />}
     </>
   );
 };
