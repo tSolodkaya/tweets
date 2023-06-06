@@ -1,6 +1,7 @@
 import TweetsList from 'components/TweetsList/TweetsList';
 import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import Notiflix from 'notiflix';
 import tweetsApi from '../services/tweets-api';
 import routes from 'routes';
 import { options } from '../variables';
@@ -27,10 +28,13 @@ const Tweets = () => {
         }
         console.log(data);
         setIsShowButton(true);
-        if (data.length < 3) {
+        setTweets(prevState => [...prevState, ...data]);
+
+        if (currentPage > 1 && data.length < 3) {
+          Notiflix.Notify.info('We have no tweets more!');
           setIsShowButton(false);
+          return;
         }
-        return setTweets(prevState => [...prevState, ...data]);
       })
       .catch(error => setError(error.message));
   }, [currentPage]);
