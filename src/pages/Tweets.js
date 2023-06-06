@@ -26,7 +26,6 @@ const Tweets = () => {
         if (data.length === 0) {
           return Promise.reject(new Error(`Sorry, we have no tweets.`));
         }
-        console.log(data);
         setIsShowButton(true);
         setTweets(prevState => [...prevState, ...data]);
 
